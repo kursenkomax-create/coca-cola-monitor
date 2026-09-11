@@ -1,0 +1,49 @@
+monitor:
+  discovery_every_cycles: 3
+  request_timeout_seconds: 20
+  domain_delay_seconds: 2.0
+  max_search_results_per_query: 20
+  use_playwright_fallback: true
+  max_candidates_per_cycle: 120
+
+filters:
+  currency: UAH
+  max_price_per_can: 30.0
+  require_in_stock: true
+  require_cod: true
+  desired_quantity: 120
+  accept_unknown_stock_quantity: true
+  min_confidence: 0.58
+
+products:
+  - id: coca_classic_033
+    label: Coca-Cola Classic 0.33 ЖБ
+    enabled: true
+    max_price_per_can: 30.0
+    discovery_queries:
+      - 'Coca-Cola 0.33 жб купити'
+      - 'Coca Cola 0,33 банка купити'
+      - 'Coca-Cola 0.33 банка оптом'
+  - id: coca_zero_033
+    label: Coca-Cola Zero 0.33 ЖБ
+    enabled: true
+    max_price_per_can: 30.0
+    discovery_queries:
+      - 'Coca-Cola Zero 0.33 жб купити'
+      - 'Coca Cola Zero 0,33 банка купити'
+      - 'Coca-Cola Zero 0.33 банка оптом'
+
+seed_urls:
+  - 'https://horeca.co.ua/napii-hazovanyi-coca-cola-0-33-l-zh-b/'
+  - 'https://ukr-produkt.com/kola/'
+  - 'https://stakanopt.com.ua/catalog/mineralna-voda'
+  - 'https://rozetka.com.ua/ua/coca_cola_5449000131805/p14672786/'
+  - 'https://korzinka24.prom.ua/ua/p2184353382-napitok-coca-cola.html'
+  - 'https://www.papirus.com.ua/catalog/view/257072/'
+
+notifications:
+  notify_on_first_match: true
+  notify_on_price_drop: true
+  notify_on_back_in_stock: true
+  notify_on_cod_becomes_available: true
+  repeat_after_hours: 24
